@@ -1,6 +1,6 @@
 [package]
 name = "rcgen"
-version = "0.12.0"
+version = "0.12.0-kit"
 documentation = "https://docs.rs/rcgen"
 description.workspace = true
 repository.workspace = true
@@ -27,7 +27,7 @@ yasna = { version = "0.5.2", features = ["time", "std"] }
 ring = { version = "0.17", optional = true }
 pem = { workspace = true, optional = true }
 time = { version = "0.3.6", default-features = false }
-x509-parser = { version = "0.15.1-kit", features = ["verify"], optional = true }
+x509-parser = { git = "https://github.com/kitplummer/x509-parser", features = ["verify"], optional = true }
 zeroize = { version = "1.2", optional = true }
 
 [features]
@@ -46,7 +46,7 @@ allowed_external_types = [
 
 [dev-dependencies]
 openssl = "0.10"
-x509-parser = { version = "0.15.1-kit", features = ["verify"] }
+x509-parser = { git = "https://github.com/kitplummer/x509-parser", features = ["verify"] }
 rustls-webpki = { version = "0.101.0", features = ["std"] }
 botan = { version = "0.10", features = ["vendored"] }
 rand = "0.8"
